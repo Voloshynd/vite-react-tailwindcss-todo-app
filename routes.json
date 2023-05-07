@@ -1,0 +1,3 @@
+{
+    "/api/tasks/:id/operations":"/tasks/:id/operations"
+}
