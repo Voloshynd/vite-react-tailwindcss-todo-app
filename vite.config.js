@@ -2,8 +2,8 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
-  base: "/vite-react-app-tailwindcss-todo-app/",
   plugins: [react()],
+  base: "/vite-react-app-tailwindcss-todo-app/",
   build: {
     manifest: true,
     rollupOptions: {
