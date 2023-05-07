@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 
 export default defineConfig({
-  base: "https://github.com/Voloshynd/vite-react-app-tailwindcss-todo-app.git",
+  base: "/vite-react-app-tailwindcss-todo-app/",
   plugins: [react()],
 build: {
   manifest: true,
