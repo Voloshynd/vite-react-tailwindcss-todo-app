@@ -16,9 +16,8 @@ function NewTask({ onNewTask }) {
       status: "open",
     };
 
-
-    if(!task.title){
-      return; 
+    if (!task.title) {
+      return;
     } else {
       addTask(task, onNewTask);
     }
@@ -36,7 +35,7 @@ function NewTask({ onNewTask }) {
               className="form-control gray-50 border border-gray-300 text-gray-900 bg-gray-50 text-lg rounded-lg w-full p-2.5 mt-5 focus:ring-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="Title"
               value={title}
-              onChange={(e) =>setTitle(e.target.value)}
+              onChange={(e) => setTitle(e.target.value)}
             />
           </div>
           <div className="form-group">
@@ -63,6 +62,3 @@ function NewTask({ onNewTask }) {
 }
 
 export default NewTask;
-
-
-// className="form-control gray-50 border border-gray-300 text-gray-900 bg-gray-50 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 w-11/12 mt-5"

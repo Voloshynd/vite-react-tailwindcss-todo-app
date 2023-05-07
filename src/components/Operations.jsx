@@ -1,4 +1,4 @@
-import React, { useState, useRef} from "react";
+import React, { useState, useRef } from "react";
 import Operation from "./Operation";
 import { addOperation } from "../../api/operations";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,9 +12,7 @@ function Operations({
   setOperations,
   status,
 }) {
-  const [operationDes, setOperationDes] = useState(""); 
-
-
+  const [operationDes, setOperationDes] = useState("");
 
   const handleAddNewOperation = (e) => {
     e.preventDefault();
@@ -24,34 +22,28 @@ function Operations({
       time: 0,
     };
 
-    addOperation(taskID, operation, 
-      (data) => {
+    addOperation(taskID, operation, (data) => {
       setOperations((prev) => {
         return [...prev, data];
-      }
-      );
+      });
 
       setForm(false);
       setOperationDes("");
     });
-
   };
-
-
-
 
   const handleDeleteOperation = (id) => {
     setOperations((prev) => prev.filter((operation) => operation.id !== id));
   };
 
-  console.log(operations);
   return (
     <>
       {form === true ? (
         <div className="card-body w-full h-16 flex items-center rounded-b-lg bg-white">
           <form onSubmit={handleAddNewOperation} className="w-full">
             <div className="input-group flex ml-6">
-              <input autoFocus
+              <input
+                autoFocus
                 type="text"
                 className="form-control h-8 form-control gray-50 border border-gray-300 text-gray-900 bg-gray-50 text-lg w-full p-2.5 rounded-l-lg focus:ring-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="Operation description"

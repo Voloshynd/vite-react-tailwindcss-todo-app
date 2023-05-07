@@ -10,7 +10,6 @@ export const getOperations = async (id, successCallback) => {
     });
 
     const data = await response.json();
- 
 
     if (id && typeof successCallback !== "function") {
       successCallback(data);
@@ -80,9 +79,6 @@ export const updateOperation = async (id, operation, successCallback) => {
   }
 };
 
-
-
-
 // export const getSubOperations = async (id)=>{
 //   try {
 //     const response = await fetch(`${API_URL}/operations`, {
@@ -93,7 +89,7 @@ export const updateOperation = async (id, operation, successCallback) => {
 //     });
 
 //     const data = await response.json();
- 
+
 //     return data
 
 //   } catch (err) {

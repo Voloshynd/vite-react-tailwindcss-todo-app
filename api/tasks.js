@@ -1,7 +1,6 @@
 import { API_URL } from "./constans";
 
 export const getTasks = async (successCallback) => {
- 
   try {
     const response = await fetch(`${API_URL}/tasks`, {
       method: "GET",
@@ -11,11 +10,11 @@ export const getTasks = async (successCallback) => {
     });
 
     const data = await response.json();
-    
+
     if (typeof successCallback !== "function") {
-      throw new Error("Błąd!");
+      successCallback(data);
     }
-    successCallback(data);
+
   } catch (err) {
     console.log(err);
   }

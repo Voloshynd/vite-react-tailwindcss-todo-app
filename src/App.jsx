@@ -14,8 +14,6 @@ function App() {
       })
   },[]);
 
-
- 
   const handleAddTask = (task) => {
     setTasks((prev) => {
       return [...prev, task];
@@ -23,25 +21,19 @@ function App() {
   
   };
 
- 
-
   const handleDeleteTask = id => {
     setTasks(prev => prev.filter(task => task.id !== id));
   };
 
-
- 
   return (
     <main> 
-    <Header />
-    <div className="flex flex-col items-center justify-center py-16">
-    <NewTask onNewTask={handleAddTask} />
-      {!tasks ? null : tasks.map((task) => { 
-        return <Task key={task.id} id={task.id} title={task.title} description={task.description} statusTask={task.status} onRemoveTask ={handleDeleteTask}/>;
-      })}
-    </div>
-    
-
+      <Header />
+        <div className="flex flex-col items-center justify-center py-16">
+          <NewTask onNewTask={handleAddTask} />
+            {!tasks ? null : tasks.map((task) => { 
+            return <Task key={task.id} id={task.id} title={task.title} description={task.description} statusTask={task.status} onRemoveTask ={handleDeleteTask}/>;
+          })}
+        </div>
     </main>
   )
 }
