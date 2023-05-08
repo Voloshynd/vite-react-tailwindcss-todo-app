@@ -1,10 +1,9 @@
 {
-  "homepage": "https://Voloshynd.github.io/vite-react-tailwindcss-todo-app",
   "name": "react-todo-app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  
+  "homepage": "https://Voloshynd.github.io/vite-react-tailwindcss-todo-app", 
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
